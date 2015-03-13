@@ -1,0 +1,20 @@
+
+<article class="{{ post.type }} blog_summary">
+  
+  <div class="left image">
+    {% if post.image %}
+    <a href="{{ post.url }}"><img src="{{ post.image }}" width="200" height="150"/></a>
+    {% endif %}
+  </div>
+
+  <div class="left blog_title">
+      <h1 class="entry-title">
+          <a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %} {{ post.title }}{% endif %}</a>
+      </h1>
+
+    {% if post.summary %}
+    <p>{{ post.summary }}</p>
+    {% endif %}
+  </div>
+  
+</article>

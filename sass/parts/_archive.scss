@@ -1,0 +1,126 @@
+.archive-list{
+		overflow: hidden;
+		margin-left: auto;
+    margin-right: auto;
+
+		@media screen and (max-width: 600px){
+			width: 100%;
+		}
+
+		@media screen and (min-width: 600px){
+			width: 60%;
+		}
+
+    .archives{
+        margin-bottom:	20px;
+
+	    h1.year{
+	    	color: $color-main;
+			font-size: 32px;
+	    }
+	}
+
+    article{
+    	font-weight: 100;
+    	padding: 0px;
+    	margin-bottom: 10px;
+    }
+
+	a.post-title{
+		font-size: 24px;
+		color: #333;
+		&:hover{
+			color: $color-main;
+		}
+	}
+
+	span{
+		float: right;
+		color: #999;
+	}
+}
+
+.archiv33es{
+	position: relative;
+	&:last-of-type{
+		&:before{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 200px;
+			border-top: 1px solid $color-gray04;
+		}
+	}
+	.year{
+		line-height: 35px;
+		width: 200px;
+		position: absolute;
+		top: 0;
+		padding-top: 15px;
+		border-top: 1px solid #fff;
+		&:before{
+			content: "";
+			position: absolute;
+			top: -2px;
+			width: 100%;
+			border-top: 1px solid $color-gray04;
+		}
+		@media screen and (max-width: 600px){
+			position: relative;
+			width: 100%;
+		}
+	}
+	articl224e{
+		margin-left: 200px;
+		padding: 15px 0;
+		@media screen and (max-width: 600px){
+			margin-left: 0;
+			&:first-of-type{
+				border-top: none;
+				padding-top: 30px;
+			}
+		}
+		.title{
+			margin-bottom: 0;
+		}
+		.meta{
+			color: $color-gray02;
+			font-size: 0.9em;
+			line-height: 2;
+			margin-top: 15px;
+			@media screen and (max-width: 600px){
+				display: none;
+			}
+			span{
+				margin-right: 30px;
+				@include inline-block;
+				&:before{
+					color: $color-gray03;
+					font: 1.3em $font-icon;
+					padding-right: 10px;
+				}
+			}
+			a{
+				color: $color-gray02;
+				@include transition(0.3s);
+				&:hover{
+					color: $color-gray01;
+				}
+			}
+			.date, .tags, .comments {
+			    padding-left: 30px;
+			    position: relative;
+			    &:before{
+			      color: $color-gray02;
+			      font: 1.3em $font-icon;
+			      line-height: 1.6em;
+			      position: absolute;
+			      left: 0;
+			    }
+			}
+			.date:before{content: "\f073";}
+			.tags:before{content: "\f02c";}
+			.comments:before{content: "\f075";}
+		}
+	}
+}

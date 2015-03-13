@@ -1,0 +1,9 @@
+---
+layout: default
+title: Blog Archives
+---
+<div class="archive-list">
+	{% for post in site.posts reverse %}
+		{% include archive_post.html %}
+	{% endfor %}
+</div>

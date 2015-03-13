@@ -1,0 +1,5 @@
+// Main Link Colors
+$link-color: $color-main;
+$link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
+$link-color-visited: $link-color !default;
+$link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;

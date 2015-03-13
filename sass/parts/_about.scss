@@ -1,0 +1,51 @@
+.about-amy{
+
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+
+  @media screen and (max-width: 620px) {
+    width: 100%;
+  }
+
+
+  text-align: center;
+
+  h2{
+    	font-family: "felt-tip-roman",sans-serif;
+      color: $color-main;
+  }
+
+  div{
+    margin: 50px 0px;
+  }
+
+  li{
+    text-align: left;
+    margin-left: 30px;
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    a{
+      position: relative;
+      color: $color-gray03;
+
+      &:hover{
+        color: $color-gray02;
+      }
+
+      i{
+        width: 60px;
+      }
+      p{
+        display: inline-block;
+        text-align: center;
+        color: $color-gray01;
+        top: 50%;
+        transform: translate(0, -20%);
+      }
+    }
+
+  }
+}

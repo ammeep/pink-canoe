@@ -1,0 +1,15 @@
+{% capture date %}{{ post.date }}{% endcapture %}
+{% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
+{% unless year == this_year %}
+	{% assign year = this_year %}
+	{% unless forloop.first %}
+		</section>
+	{% endunless %}
+	<section class="archives"><h1 class="year">{{ date | date: "%Y" }}</section>
+{% endunless %}
+<article>
+	<a class="post-title" href="{{ root_url }}{{ post.url }}">
+		{{ post.title }}
+	</a>
+	<span>{{ date | date: "%-d %B %e" }}</span>
+</article>

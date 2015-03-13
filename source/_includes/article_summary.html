@@ -1,0 +1,31 @@
+<div class="post-summary-content">
+	<div class="post-image">
+	    {% if post.image %}
+	    	<a href="{{ post.url }}"><img src="{{ post.image }}" width="200" height="150"></img></a>
+			{% else %}
+			{% assign placeholderImage = "http://lorempixel.com/g/200/150/abstract/" %}
+				<a href="{{ placeholderImage }}">
+					<img src="{{ placeholderImage }}" width="200" height="150"></img>
+				</a>
+	    {% endif %}
+	</div>
+
+	<div class="post-description">
+		<h2 class="title">
+			{% if post.external-url %}
+			<a href="{{ post.external-url }}">
+			{% else %}
+			<a href="{{ root_url }}{{ post.url }}">
+			{% endif %}
+				{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
+		</h2>
+		 <div class="post-excert">
+			{% if post.summary %}
+		 		{{ post.summary }}
+		  {% else %}
+				{{ post.content | truncate: 400 }}
+			{% endif %}
+		 	<a rel="full-article" href="{{ root_url }}{{ post.url }}">read more...</a>
+		 </div>
+	</div>
+</div>

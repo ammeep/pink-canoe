@@ -1,0 +1,10 @@
+<div class="post-header">
+	<h2 class="title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h2>
+	 {% unless page.meta == false %}
+      <p class="meta">
+        {% include post/date.html %}{{ time }}
+      </p>
+    {% endunless %}
+</div>	
+
+<div class="entry-content">{{ content }}</div>
